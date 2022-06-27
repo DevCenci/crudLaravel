@@ -13,6 +13,7 @@ Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth'])->name('dashboard');
 
+
 Route::group(['prefix'=>'estados', 'where'=>['id'=>'[0-9]+']], function() {
     Route::get( '', [EstadosController::class, 'index'] )->name('estados');
     Route::get('create', [EstadosController::class, 'create'] )->name('estados.create');

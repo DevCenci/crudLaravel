@@ -15,15 +15,21 @@
                     <x-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
                         {{ __('Dashboard') }}
                     </x-nav-link>
+                    
+                    <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
+                        <x-nav-link :href="route('estados')" :active="request()->route('estados')">
+                            {{ __('Estado') }}
+                        </x-nav-link>
+                    </div>
 
-                    <li class="nav-item">
-                        <a class="nav-link" href="{{route('estados')}}">ESTADOS</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="{{route('cidades')}}">CIDADES</a>
-                    </li>
+                    <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
+                        <x-nav-link :href="route('cidades')" :active="request()->route('cidades')">
+                            {{ __('Cidade') }}
+                        </x-nav-link>
+                    </div>
+
                 </div>
-                
+
             </div>
 
             <!-- Settings Dropdown -->
