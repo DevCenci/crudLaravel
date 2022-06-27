@@ -9,6 +9,6 @@ class Cidade extends Model
     protected $fillable = ['nome', 'cep', 'populacao', 'estado_id'];
 
     public function estado(){
-        return $this->belongsTo('App\Estado');
+        return $this->belongsTo('App\Models\Estado');
     }
 }

@@ -16,7 +16,7 @@
                 <div class="form-group">
                     {!! Form::label('estado_id', 'Estado:') !!}
                     {!! Form::select('estado_id',
-                        \App\Estado::orderBy('nome')->pluck('nome', 'id')->toArray(), null, ['class' => 'form-control']) !!}
+                        \App\Models\Estado::orderBy('nome')->pluck('nome', 'id')->toArray(), null, ['class' => 'form-control']) !!}
                 </div>
 
                 <div class="form-group">

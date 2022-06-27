@@ -28,6 +28,7 @@ class EstadosController extends Controller
         Estado::create($novoEstado);
         return redirect()->route('estados');
     }
+    
     //metodo responsavel por deletar registro
     public function destroy($id){
         Estado::find($id)->delete();
